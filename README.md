@@ -25,7 +25,7 @@ The final dataset is structured as a panel at the region × month × age × sex 
 
 ## Tools used
 
-Python, pandas, numpy, statsmodels, matplotlib, geopandas
+Python, pandas, numpy, statsmodels, matplotlib, geopandas (GIS)
 
 ## Skills Demonstrated
 
@@ -51,7 +51,7 @@ The final dataset includes constructed variables such as:
 
 ## Key Outputs
 
-- Main fixed effects regression results (table)-------------link??????????????
+- Main fixed effects regression results (table)
 - Age and sex subgroup regression results
 - Spatial distribution of weather stations and mortality rates
 
@@ -64,11 +64,11 @@ Data/
 
 Outputs/
 
-- tables/
+tables/
 - Main_results_table.png
 - Demographic_results_table.png
 
-- maps/
+maps/
 - Weather_stations_coverage_per_province.png
 - Average_monthly_mortality_rate_by_province.png
 
