@@ -3,15 +3,22 @@ This project analyzes the relationship between extreme heat exposure and mortali
 
 ## Data Sources
 
-- Meteorological station-level daily weather data from the national meteorological institute of Spain (AEMET)
-- Regional mortality statistics from the national statistics agency of Spain (INE)
-- Population and demographic data from the national statistics agency, used for mortality normalization (INE)
+- Meteorological station-level daily weather data from the Spanish Meteorological Agency (AEMET)
+- Regional mortality statistics from the National Statistics Institute of Spain (INE)
+- Population and demographic data from INE, used for mortality normalization
 - Administrative geographic boundary data for mapping (Eurostat GISCO)
+
+## Data Scale
+
+The project integrates multiple data sources and produces a final panel dataset of approximately:
+- ~400,000+ rows (observations)
+- 165 columns (variables)
+The final dataset is structured as a panel at the region × month × age × sex level.
 
 ## Project Workflow
 
-1. Collect weather data from API
-2. Clean and standardize datasets
+1. Collect weather data from API (~5,000+ CSV files retrieved in 6-month chunks across multiple years)
+2. Clean and standardize all datasets
 3. Construct panel dataset and heat indicators
 4. Run fixed effects regressions and demographic subgroup analysis
 5. Generate maps and visualizations
@@ -20,26 +27,42 @@ This project analyzes the relationship between extreme heat exposure and mortali
 
 Python, pandas, numpy, statsmodels, matplotlib, geopandas
 
-## Key Methods
+## Skills Demonstrated
 
-- Fixed effects regression
-- Panel data analysis
-- Feature engineering
-- Spatial visualization
+- Panel data construction (region × time × demographic groups)
+- Fixed effects regression modeling
+- Feature engineering of climate exposure indicators
+- Large-scale data integration from administrative sources
+- API-based data collection and batch processing (~5,000+ files)
+- Data cleaning and transformation at scale
+- Spatial visualization and mapping (GIS)
+
+## Key Variables
+
+The final dataset includes constructed variables such as:
+- Extreme temperature indicators (e.g. high percentile thresholds)
+- Population-based mortality rates
+- Mortality outcomes disaggregated by age group and sex
 
 ## Key Findings
 
 - Higher extreme-temperature exposure was associated with increased mortality rates in Spain
 - Effects varied across age and sex groups
 
+## Key Outputs
+
+- Main fixed effects regression results (table)-------------link??????????????
+- Age and sex subgroup regression results
+- Spatial distribution of weather stations and mortality rates
+
 ## Repository Structure
 
-- Project_Master_Thesis/
+Project_Master_Thesis/
 
-- Data/
+Data/
 - cleaned_dataset_for_the_main_result.csv
 
-- Outputs/
+Outputs/
 
 - tables/
 - Main_results_table.png
@@ -49,29 +72,19 @@ Python, pandas, numpy, statsmodels, matplotlib, geopandas
 - Weather_stations_coverage_per_province.png
 - Average_monthly_mortality_rate_by_province.png
 
-- Scripts/
-
-- 01_api_collection/
+Scripts/
 - PART_1_api.py
-
-- 02_cleaning/
 - PART_2_weather_cleaning.py
 - PART_3_mortality_cleaning.py
 - PART_4_population_cleaning.py
-
-- 03_building_analysis_dataset/
 - PART_5_demographics_merging.py
 - PART_6_panel_construction.py
 - PART_7_merging_all.py
-
-- 04_regression_analysis/
 - PART_8_fixed_effects_analysis.py
 - PART_9_demographic_analysis.py
-
-- 05_visualization/
 - PART_10_geographic_maps.py
 
-- README.md
+README.md
 
 
 ## Data Availability
