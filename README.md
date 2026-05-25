@@ -34,17 +34,11 @@ Python, pandas, numpy, statsmodels, matplotlib, geopandas
 
 ## Repository Structure
 
-...
-project/
-├── scripts/
-├── data/
-├── outputs/
-└── README.md
-...
-
 - Project_Master_Thesis/
+- 
 - Data/
 - cleaned_dataset_for_the_main_result.csv
+- 
 - Outputs/
 - tables/
 - Main_results_table.png
@@ -52,6 +46,7 @@ project/
 - maps/
 - Weather_stations_coverage_per_province.png
 - Average_monthly_mortality_rate_by_province.png
+- 
 - Scripts/
 - 01_api_collection/
 - PART_1_api.py
@@ -68,6 +63,7 @@ project/
 - PART_9_demographic_analysis.py
 - 05_visualization/
 - PART_10_geographic_maps.py
+- 
 - README.md
 
 
