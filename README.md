@@ -16,7 +16,7 @@ The full panel contains approximately:
 - ~400,000+ rows
 - 165 columns (variables)
 
-The weather-linked analytical subset used for the main regression analysis covers the 2017–2019 period.
+The analytical subset used for the main regression analysis covers the 2017–2019 period.
 
 ## Project Workflow
 
